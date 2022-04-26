@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         Handler(Looper.getMainLooper()).postDelayed({
             startActivity(Intent(this, HomeActivity::class.java))
             finish()
-        }, 15000)
+        }, 1500)
 
     }
 
@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun startAnimation() {
-        binding.typeWriter.animateText("Linux \nGo")
+        binding.typeWriter.animateText("Linux\nGo")
         binding.typeWriter.setCharacterDeley(100)
     }
 }

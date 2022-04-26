@@ -23,7 +23,7 @@
             android:fontFamily="@font/fof"
             android:gravity="center"
             android:text="@string/linux_go"
-            android:textColor="#021032"
+            android:textColor="@color/main"
             android:textSize="50sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
