@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <uz.hamroev.linuxgo.shadow.ShadowView
+        android:id="@+id/main_shadow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:shadowDx="5dp"
+        app:shadowDy="10dp"
+        app:shadowRadius="1dp">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_margin"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3">
+
+                    <uz.hamroev.linuxgo.shadow.ShadowView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:shadowDx="5dp"
+                        app:shadowDy="10dp"
+                        app:shadowRadius="1dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_margin="@dimen/default_margin"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <ImageView
+                                    android:src=""
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"/>
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </uz.hamroev.linuxgo.shadow.ShadowView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </uz.hamroev.linuxgo.shadow.ShadowView>
+
+</LinearLayout>
