@@ -7,6 +7,83 @@
 
     <!--    Subjects name-->
     <string name="getting_started">Getting started</string>
+    <string name="command_line">Command Line</string>
+    <string name="text_fu">Text-Fu</string>
+    <string name="text_fu_advanced">Advanced Text-Fu</string>
+    <string name="user_management">User Management</string>
+    <string name="permissions">Permissions</string>
+    <string name="processes">Processes</string>
+    <string name="packages">Packages</string>
+
+    <string name="devices">Devices</string>
+    <string name="the_filesystem">The Filesystem</string>
+    <string name="boot_the_system">Boot the System</string>
+    <string name="kernel">Kernel</string>
+    <string name="init">Init</string>
+    <string name="process_utilization">Process Utilization</string>
+    <string name="logging">Logging</string>
+
+    <string name="network_sharing">Network Sharing</string>
+    <string name="network_basic">Network Basic</string>
+    <string name="subnetting">Subnetting</string>
+    <string name="routing">Routing</string>
+    <string name="network_config">Network Config</string>
+    <string name="troubleshooting">Troubleshooting</string>
+    <string name="dns">DNS</string>
+
+    <!--    Subjects Info-->
+
+    <string name="getting_started_info">What is Linux? Get started with choosing a distribution and installation.</string>
+    <string name="command_line_info">Learn the fundamentals of the command line, navigating files, directories and more.</string>
+    <string name="text_fu_info">Learn basic text manipulation and navigation.</string>
+    <string name="text_fu_advanced_info">Navigate text like a Linux spider monkey with vim and emacs.</string>
+    <string name="user_management_info">Learn about user roles and management.</string>
+    <string name="permissions_info">Learn about permission levels and modifying permissions.</string>
+    <string name="processes_info">Learn about the running processes on the system.</string>
+    <string name="packages_info">Learn all about the dpkg, apt-get, rpm and yum package management tools.</string>
+
+    <string name="devices_info">Learn about Linux devices and how they interact with the kernel and user space.</string>
+    <string name="the_filesystem_info">Learn about the Linux filesystem, the different types of filesystems, partitioning and more.</string>
+    <string name="boot_the_system_info">Learn about the stages of the Linux boot process.</string>
+    <string name="kernel_info">The most important part of the Linux system, learn about how it works and how to configure it.</string>
+    <string name="init_info">Learn about the different init systems, SysV, Upstart and systemd.</string>
+    <string name="process_utilization_info">Learn resource monitoring with top, load averages, iostat and more!</string>
+    <string name="logging_info">Learn about system logs and the /var/log directory.</string>
+
+    <string name="network_sharing_info">Learn about network sharing with rsync, scp, nfs and more.</string>
+    <string name="network_basic_info">Learn about networking basics and the TCP/IP model.</string>
+    <string name="subnetting_info">Learn about subnets and how to do subnet arithmetic!</string>
+    <string name="routing_info">Learn how packets are routed across networks!</string>
+    <string name="network_config_info">Learn about network configuration using Linux tools!</string>
+    <string name="troubleshooting_info">Learn about common networking tools to help you diagnose and troubleshoot issues!</string>
+    <string name="dns_info">Everything and more that you wanted to know about DNS.</string>
+
+    <!--    Subjects lesson count-->
+    <string name="lesson_count_getting_started">8 Lesson</string>
+    <string name="lesson_count_command_line">8 Lesson</string>
+    <string name="lesson_count_text_fu">8 Lesson</string>
+    <string name="lesson_count_text_fu_advanced">8 Lesson</string>
+    <string name="lesson_count_user_management">8 Lesson</string>
+    <string name="lesson_count_permissions">8 Lesson</string>
+    <string name="lesson_count_processes">8 Lesson</string>
+    <string name="lesson_count_packages">8 Lesson</string>
+
+    <string name="lesson_count_devices">8 Lesson</string>
+    <string name="lesson_count_the_filesystem">8 Lesson</string>
+    <string name="lesson_count_boot_the_system">8 Lesson</string>
+    <string name="lesson_count_kernel">8 Lesson</string>
+    <string name="lesson_count_init">8 Lesson</string>
+    <string name="lesson_count_process_utilization">8 Lesson</string>
+    <string name="lesson_count_logging">8 Lesson</string>
+
+    <string name="lesson_count_network_sharing">8 Lesson</string>
+    <string name="lesson_count_network_basic">8 Lesson</string>
+    <string name="lesson_count_subnetting">8 Lesson</string>
+    <string name="lesson_count_routing">8 Lesson</string>
+    <string name="lesson_count_network_config">8 Lesson</string>
+    <string name="lesson_count_troubleshooting">8 Lesson</string>
+    <string name="lesson_count_dns">8 Lesson</string>
+    <string name="subjects_title">Subjects</string>
 
 
 </resources>

@@ -46,15 +46,14 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:fontFamily="@font/roboto_regular"
-                    android:paddingStart="15dp"
-                    android:text="Subjects"
-                    android:textColor="#D3D3D3"
-                    android:textSize="14sp"
-                    android:textStyle="normal" />
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="@string/subjects_title"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:padding="10dp" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rv_subject"
