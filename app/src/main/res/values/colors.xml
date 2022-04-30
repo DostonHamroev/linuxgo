@@ -8,4 +8,10 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="main">#020E22</color>
+
+    <color name="click_ripple">#043AFD</color>
+    <color name="start_stock">#3297F0</color>
+    <color name="end_stock">#48AEE4</color>
+
+
 </resources>
