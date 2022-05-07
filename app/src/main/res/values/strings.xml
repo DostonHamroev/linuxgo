@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Linux Go</string>
+
+    <string name="ONE_SIGNAL_ID">3278fd94-a32b-4a6d-aa8e-63e78e83268d</string>
+
     <string name="grasshopper">Grasshopper Va yana nimadir</string>
     <string name="linux_go">Linux \nGo</string>
     <!-- TODO: Remove or change this placeholder text -->
@@ -59,31 +62,265 @@
     <string name="dns_info">Everything and more that you wanted to know about DNS.</string>
 
     <!--    Subjects lesson count-->
-    <string name="lesson_count_getting_started">8 Lesson</string>
-    <string name="lesson_count_command_line">8 Lesson</string>
-    <string name="lesson_count_text_fu">8 Lesson</string>
-    <string name="lesson_count_text_fu_advanced">8 Lesson</string>
-    <string name="lesson_count_user_management">8 Lesson</string>
+    <string name="lesson_count_getting_started">10 Lesson</string>
+    <string name="lesson_count_command_line">19 Lesson</string>
+    <string name="lesson_count_text_fu">16 Lesson</string>
+    <string name="lesson_count_text_fu_advanced">13 Lesson</string>
+    <string name="lesson_count_user_management">6 Lesson</string>
     <string name="lesson_count_permissions">8 Lesson</string>
-    <string name="lesson_count_processes">8 Lesson</string>
-    <string name="lesson_count_packages">8 Lesson</string>
+    <string name="lesson_count_processes">11 Lesson</string>
+    <string name="lesson_count_packages">7 Lesson</string>
 
-    <string name="lesson_count_devices">8 Lesson</string>
-    <string name="lesson_count_the_filesystem">8 Lesson</string>
-    <string name="lesson_count_boot_the_system">8 Lesson</string>
-    <string name="lesson_count_kernel">8 Lesson</string>
-    <string name="lesson_count_init">8 Lesson</string>
+    <string name="lesson_count_devices">7 Lesson</string>
+    <string name="lesson_count_the_filesystem">12 Lesson</string>
+    <string name="lesson_count_boot_the_system">5 Lesson</string>
+    <string name="lesson_count_kernel">6 Lesson</string>
+    <string name="lesson_count_init">7 Lesson</string>
     <string name="lesson_count_process_utilization">8 Lesson</string>
-    <string name="lesson_count_logging">8 Lesson</string>
+    <string name="lesson_count_logging">6 Lesson</string>
 
-    <string name="lesson_count_network_sharing">8 Lesson</string>
-    <string name="lesson_count_network_basic">8 Lesson</string>
-    <string name="lesson_count_subnetting">8 Lesson</string>
-    <string name="lesson_count_routing">8 Lesson</string>
-    <string name="lesson_count_network_config">8 Lesson</string>
-    <string name="lesson_count_troubleshooting">8 Lesson</string>
-    <string name="lesson_count_dns">8 Lesson</string>
+    <string name="lesson_count_network_sharing">5 Lesson</string>
+    <string name="lesson_count_network_basic">9 Lesson</string>
+    <string name="lesson_count_subnetting">7 Lesson</string>
+    <string name="lesson_count_routing">7 Lesson</string>
+    <string name="lesson_count_network_config">5 Lesson</string>
+    <string name="lesson_count_troubleshooting">5 Lesson</string>
+    <string name="lesson_count_dns">6 Lesson</string>
+
     <string name="subjects_title">Subjects</string>
+
+
+    <!--    Getting started items-->
+    <string name="getting_1">History</string>
+    <string name="getting_2">Choosing a Linux Distribution</string>
+    <string name="getting_3">Debian</string>
+    <string name="getting_4">Red Hat Enterprise Linux</string>
+    <string name="getting_5">Ubuntu</string>
+    <string name="getting_6">Fedora</string>
+    <string name="getting_7">Linux Mint</string>
+    <string name="getting_8">Gentoo</string>
+    <string name="getting_9">Arch Linux</string>
+    <string name="getting_10">openSUSE</string>
+
+    <!--    Command Line items-->
+    <string name="command_line_1">The Shell</string>
+    <string name="command_line_2">pwd (Print Working Directory)</string>
+    <string name="command_line_3">cd (Change Directory)</string>
+    <string name="command_line_4">ls (List Directories)</string>
+    <string name="command_line_5">touch</string>
+    <string name="command_line_6">file</string>
+    <string name="command_line_7">cat</string>
+    <string name="command_line_8">less</string>
+    <string name="command_line_9">history</string>
+    <string name="command_line_10">cp (Copy)</string>
+    <string name="command_line_11">mv (Move)</string>
+    <string name="command_line_12">mkdir (Make Directory)</string>
+    <string name="command_line_13">rm (Remove)</string>
+    <string name="command_line_14">find</string>
+    <string name="command_line_15">help</string>
+    <string name="command_line_16">man</string>
+    <string name="command_line_17">whatis</string>
+    <string name="command_line_18">alias</string>
+    <string name="command_line_19">exit</string>
+
+    <!--    Text-Fu items-->
+    <string name="text_fu_1">stdout (Standard Out)</string>
+    <string name="text_fu_2">stdin (Standard In)</string>
+    <string name="text_fu_3">stderr (Standard Error)</string>
+    <string name="text_fu_4">pipe and tee</string>
+    <string name="text_fu_5">env (Environment)</string>
+    <string name="text_fu_6">cut</string>
+    <string name="text_fu_7">paste</string>
+    <string name="text_fu_8">head</string>
+    <string name="text_fu_9">tail</string>
+    <string name="text_fu_10">expand and unexpand</string>
+    <string name="text_fu_11">join and split</string>
+    <string name="text_fu_12">sort</string>
+    <string name="text_fu_13">tr (Translate)</string>
+    <string name="text_fu_14">uniq (Unique)</string>
+    <string name="text_fu_15">wc and nl</string>
+    <string name="text_fu_16">grep</string>
+
+    <!--    Advanced Text-Fu items-->
+    <string name="advanced_text_fu_1">regex (Regular Expressions)</string>
+    <string name="advanced_text_fu_2">Text Editors</string>
+    <string name="advanced_text_fu_3">Vim (Vi Improved)</string>
+    <string name="advanced_text_fu_4">Vim Search Patterns</string>
+    <string name="advanced_text_fu_5">Vim Navigation</string>
+    <string name="advanced_text_fu_6">Vim Appending Text</string>
+    <string name="advanced_text_fu_7">Vim Editing</string>
+    <string name="advanced_text_fu_8">Vim Saving and Exiting</string>
+    <string name="advanced_text_fu_9">Emacs</string>
+    <string name="advanced_text_fu_10">Emacs Manipulate Files</string>
+    <string name="advanced_text_fu_11">Emacs Buffer Navigation</string>
+    <string name="advanced_text_fu_12">Emacs Editing</string>
+    <string name="advanced_text_fu_13">Emacs Exiting and Help</string>
+
+    <!--    User management-->
+    <string name="user_management_1">Users and Groups</string>
+    <string name="user_management_2">root</string>
+    <string name="user_management_3">/etc/passwd</string>
+    <string name="user_management_4">/etc/shadow</string>
+    <string name="user_management_5">/etc/group</string>
+    <string name="user_management_6">User Management Tools</string>
+
+    <!--    Permissions-->
+    <string name="permissions_1">File Permissions</string>
+    <string name="permissions_2">Modifying Permissions</string>
+    <string name="permissions_3">Ownership Permissions</string>
+    <string name="permissions_4">Umask</string>
+    <string name="permissions_5">Setuid</string>
+    <string name="permissions_6">Setgid</string>
+    <string name="permissions_7">Process Permissions</string>
+    <string name="permissions_8">The Sticky Bit</string>
+
+    <!--    Processes-->
+    <string name="processes_1">ps (Processes)</string>
+    <string name="processes_2">Controlling Terminal</string>
+    <string name="processes_3">Process Details</string>
+    <string name="processes_4">Process Creation</string>
+    <string name="processes_5">Process Termination</string>
+    <string name="processes_6">Signals</string>
+    <string name="processes_7">kill (Terminate)</string>
+    <string name="processes_8">niceness</string>
+    <string name="processes_9">Process States</string>
+    <string name="processes_10">/proc filesystem</string>
+    <string name="processes_11">Job Control</string>
+
+    <!--    Packages-->
+    <string name="packages_1">Software Distribution</string>
+    <string name="packages_2">Package Repositories</string>
+    <string name="packages_3">tar and gzip</string>
+    <string name="packages_4">Package Dependencies</string>
+    <string name="packages_5">rpm and dpkg</string>
+    <string name="packages_6">yum and apt</string>
+    <string name="packages_7">Compile Source Code</string>
+
+
+    <!--    Devices-->
+    <string name="device_1">/dev directory</string>
+    <string name="device_2">device types</string>
+    <string name="device_3">Device Names</string>
+    <string name="device_4">sysfs</string>
+    <string name="device_5">udev</string>
+    <string name="device_6">lsusb, lspci, lssci</string>
+    <string name="device_7">dd</string>
+
+
+    <!--    The Filesystem-->
+    <string name="filesystem_1">Filesystem Hierarchy</string>
+    <string name="filesystem_2">Filesystem Types</string>
+    <string name="filesystem_3">Anatomy of a Disk</string>
+    <string name="filesystem_4">Disk Partitioning</string>
+    <string name="filesystem_5">Creating Filesystems</string>
+    <string name="filesystem_6">mount and umount</string>
+    <string name="filesystem_7">/etc/fstab</string>
+    <string name="filesystem_8">swap</string>
+    <string name="filesystem_9">Disk Usage</string>
+    <string name="filesystem_10">Filesystem Repair</string>
+    <string name="filesystem_11">Inodes</string>
+    <string name="filesystem_12">symlinks</string>
+
+    <!--    Boot System items-->
+    <string name="boot_system_1">Boot Process Overview</string>
+    <string name="boot_system_2">Boot Process: BIOS</string>
+    <string name="boot_system_3">Boot Process: Bootloader</string>
+    <string name="boot_system_4">Boot Process: Kernel</string>
+    <string name="boot_system_5">Boot Process: Init</string>
+
+    <!--    Kernel items-->
+    <string name="kernel_1">Overview of the Kernel</string>
+    <string name="kernel_2">Privilege Levels</string>
+    <string name="kernel_3">System Calls</string>
+    <string name="kernel_4">Kernel Installation</string>
+    <string name="kernel_5">Kernel Location</string>
+    <string name="kernel_6">Kernel Modules</string>
+
+    <!--    Init items-->
+    <string name="init_1">System V Overview</string>
+    <string name="init_2">System V Service</string>
+    <string name="init_3">Upstart Overview</string>
+    <string name="init_4">Upstart Jobs</string>
+    <string name="init_5">Systemd Overview</string>
+    <string name="init_6">Systemd Goals</string>
+    <string name="init_7">Power States</string>
+
+    <!--    Process Utilization items-->
+    <string name="process_utilization_1">Tracking processes: top</string>
+    <string name="process_utilization_2">lsof and fuser</string>
+    <string name="process_utilization_3">Process Threads</string>
+    <string name="process_utilization_4">CPU Monitoring</string>
+    <string name="process_utilization_5">I/O Monitoring</string>
+    <string name="process_utilization_6">Memory Monitoring</string>
+    <string name="process_utilization_7">Continuous Monitoring</string>
+    <string name="process_utilization_8">Cron Jobs</string>
+
+    <!--    Logging items-->
+    <string name="logging_1">System Logging</string>
+    <string name="logging_2">syslog</string>
+    <string name="logging_3">General Logging</string>
+    <string name="logging_4">Kernel Logging</string>
+    <string name="logging_5">Authentication Logging</string>
+    <string name="logging_6">Managing Log Files</string>
+
+    <!--    Network Sharing items-->
+    <string name="network_sharing_1">File Sharing Overview</string>
+    <string name="network_sharing_2">rsync</string>
+    <string name="network_sharing_3">Simple HTTP Server</string>
+    <string name="network_sharing_4">NFS</string>
+    <string name="network_sharing_5">Samba</string>
+
+    <!--    Network Basic items-->
+    <string name="network_basic_1">Network Basics</string>
+    <string name="network_basic_2">OSI Model</string>
+    <string name="network_basic_3">TCP/IP Model</string>
+    <string name="network_basic_4">Network Addressing</string>
+    <string name="network_basic_5">Application Layer</string>
+    <string name="network_basic_6">Transport Layer</string>
+    <string name="network_basic_7">Network Layer</string>
+    <string name="network_basic_8">Link Layer</string>
+    <string name="network_basic_9">DHCP Overview</string>
+
+    <!--    Subnetting items-->
+    <string name="subnetting_1">IPv4</string>
+    <string name="subnetting_2">Subnets</string>
+    <string name="subnetting_3">Subnet Math</string>
+    <string name="subnetting_4">Subnetting Cheats</string>
+    <string name="subnetting_5">CIDR</string>
+    <string name="subnetting_6">NAT</string>
+    <string name="subnetting_7">IPv6</string>
+
+    <!--    Routing items-->
+    <string name="routing_1">What is a router?</string>
+    <string name="routing_2">Routing Table</string>
+    <string name="routing_3">Path of a Packet</string>
+    <string name="routing_4">Routing Protocols</string>
+    <string name="routing_5">Distance Vector Protocols</string>
+    <string name="routing_6">Link State Protocols</string>
+    <string name="routing_7">Border Gateway Protocol</string>
+
+    <!--    Network Config items-->
+    <string name="network_config_1">Network Interfaces</string>
+    <string name="network_config_2">route</string>
+    <string name="network_config_3">dhclient</string>
+    <string name="network_config_4">Network Manager</string>
+    <string name="network_config_5">arp</string>
+
+    <!--    Troubleshooting items-->
+    <string name="troubleshooting_1">ICMP</string>
+    <string name="troubleshooting_2">ping</string>
+    <string name="troubleshooting_3">traceroute</string>
+    <string name="troubleshooting_4">netstat</string>
+    <string name="troubleshooting_5">Packet Analysis</string>
+
+    <!--    dns items-->
+    <string name="dns_1">What is DNS?</string>
+    <string name="dns_2">DNS Components</string>
+    <string name="dns_3">DNS Process</string>
+    <string name="dns_4">/etc/hosts</string>
+    <string name="dns_5">DNS Setup</string>
+    <string name="dns_6">DNS Tools</string>
+    <string name="banner_test">ca-app-pub-6671675964702368/8676435288</string>
 
 
 </resources>

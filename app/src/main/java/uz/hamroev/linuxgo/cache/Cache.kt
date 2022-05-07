@@ -27,16 +27,21 @@ object Cache {
             }
         }
 
-    var path: String?
-        get() = sharedPreferences.getString("path", "0")
+    var modulePoition: Int?
+        get() = sharedPreferences.getInt("moduleposition", 0)
         set(value) = sharedPreferences.edit() {
             if (value != null) {
-                it.putString("path", value)
+                it.putInt("moduleposition", value)
             }
         }
 
-
-
+    var contentPosition: Int?
+        get() = sharedPreferences.getInt("contentposition", 0)
+        set(value) = sharedPreferences.edit() {
+            if (value != null) {
+                it.putInt("contentposition", value)
+            }
+        }
 
 
 }

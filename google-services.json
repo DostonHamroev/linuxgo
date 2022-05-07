@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "528179276089",
+    "project_id": "linux-go-39812",
+    "storage_bucket": "linux-go-39812.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:528179276089:android:b3f0e91047becc21d7e0e8",
+        "android_client_info": {
+          "package_name": "uz.hamroev.linuxgo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "528179276089-7c11eoqqpu8tsup9nhe0bkk7i118jkp8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-RGoh4PX4fL3J_erE4Ek0_r0PIiwY9HQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "528179276089-7c11eoqqpu8tsup9nhe0bkk7i118jkp8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

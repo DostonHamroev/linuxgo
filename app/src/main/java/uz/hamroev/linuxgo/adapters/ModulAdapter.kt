@@ -3,7 +3,9 @@ package uz.hamroev.linuxgo.adapters
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import androidx.recyclerview.widget.RecyclerView
+import uz.hamroev.linuxgo.R
 import uz.hamroev.linuxgo.databinding.ItemModulBinding
 import uz.hamroev.linuxgo.models.Content
 import uz.hamroev.linuxgo.models.Modul
@@ -20,6 +22,11 @@ class ModulAdapter(
 
     inner class VhModul(var itemModulBinding: ItemModulBinding) :
         RecyclerView.ViewHolder(itemModulBinding.root) {
+
+        val anim_right = AnimationUtils.loadAnimation(context, R.anim.anim_left)
+
+
+
         fun onBind(modul: Modul, positionModul: Int) {
 
             itemModulBinding.moduleName.text = modul.modulName
@@ -32,6 +39,8 @@ class ModulAdapter(
                     }
                 })
             itemModulBinding.rvModule.adapter = contentAdapter
+            itemModulBinding.imageArrowRight.animation = anim_right
+
 
         }
     }

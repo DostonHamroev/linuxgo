@@ -9,5 +9,14 @@
         android:id="@+id/homeFragment"
         android:name="uz.hamroev.linuxgo.fragment.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_subjectsFragment"
+            app:destination="@id/subjectsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/subjectsFragment"
+        android:name="uz.hamroev.linuxgo.fragment.SubjectsFragment"
+        android:label="fragment_subjects"
+        tools:layout="@layout/fragment_subjects" />
 </navigation>

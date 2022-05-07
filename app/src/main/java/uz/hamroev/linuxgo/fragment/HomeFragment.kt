@@ -6,9 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import uz.hamroev.linuxgo.R
 import uz.hamroev.linuxgo.adapters.ModulAdapter
 import uz.hamroev.linuxgo.adapters.SubjectAdapter
+import uz.hamroev.linuxgo.cache.Cache
 import uz.hamroev.linuxgo.databinding.FragmentHomeBinding
 import uz.hamroev.linuxgo.models.Content
 import uz.hamroev.linuxgo.models.Modul
@@ -31,16 +33,18 @@ class HomeFragment : Fragment() {
     ): View {
         binding = FragmentHomeBinding.inflate(layoutInflater, container, false)
 
-
+        startTypeWriter()
         loadSubjects()
         loadAdapter()
-
         loadModul()
         loadModulAdapter()
 
-
-
         return binding.root
+    }
+
+    private fun startTypeWriter() {
+        binding.typeWriter.animateText("Linux Go")
+        binding.typeWriter.setCharacterDeley(100)
     }
 
     private fun loadModulAdapter() {
@@ -49,64 +53,9 @@ class HomeFragment : Fragment() {
             listModule,
             object : ModulAdapter.OnModuleItemCLickListener {
                 override fun onCLick(modul: Modul, position: Int, contentPosition: Int) {
-                    when (position) {
-                        0 -> {
-                            when (contentPosition) {
-                                0 -> {
-                                }
-                                1 -> {
-                                }
-                                2 -> {
-                                }
-                                3 -> {
-                                }
-                                4 -> {
-                                }
-                                5 -> {
-                                }
-                                6 -> {
-                                }
-                                7 -> {
-                                }
-                            }
-                        }
-                        1 -> {
-                            when (contentPosition) {
-                                0 -> {
-                                }
-                                1 -> {
-                                }
-                                2 -> {
-                                }
-                                3 -> {
-                                }
-                                4 -> {
-                                }
-                                5 -> {
-                                }
-                                6 -> {
-                                }
-                            }
-                        }
-                        2 -> {
-                            when (contentPosition) {
-                                0 -> {
-                                }
-                                1 -> {
-                                }
-                                2 -> {
-                                }
-                                3 -> {
-                                }
-                                4 -> {
-                                }
-                                5 -> {
-                                }
-                                6 -> {
-                                }
-                            }
-                        }
-                    }
+                    Cache.modulePoition = position
+                    Cache.contentPosition = contentPosition
+                    findNavController().navigate(R.id.subjectsFragment)
                 }
             })
         binding.rvModule.adapter = modulAdapter
@@ -310,6 +259,67 @@ class HomeFragment : Fragment() {
             object : SubjectAdapter.OnSubjectClickListener {
                 override fun onCLick(subject: Subject, position: Int) {
 
+                    if (position >= 0 && position <= 7) {
+                        Cache.modulePoition = 0
+                        Cache.contentPosition = position
+                        findNavController().navigate(R.id.subjectsFragment)
+                    }
+                    if (position >= 8 && position <= 14) {
+                        Cache.modulePoition = 1
+                        when (position) {
+                            8 -> {
+                                Cache.contentPosition = 0
+                            }
+                            9 -> {
+                                Cache.contentPosition = 1
+                            }
+                            10 -> {
+                                Cache.contentPosition = 2
+                            }
+                            11 -> {
+                                Cache.contentPosition = 3
+                            }
+                            12 -> {
+                                Cache.contentPosition = 4
+                            }
+                            13 -> {
+                                Cache.contentPosition = 5
+                            }
+                            14 -> {
+                                Cache.contentPosition = 6
+                            }
+                        }
+                        findNavController().navigate(R.id.subjectsFragment)
+                    }
+                    if (position >= 15 && position <= 21) {
+                        Cache.modulePoition = 2
+                        when (position) {
+                            15 -> {
+                                Cache.contentPosition = 0
+                            }
+                            16 -> {
+                                Cache.contentPosition = 1
+                            }
+                            17 -> {
+                                Cache.contentPosition = 2
+                            }
+                            18 -> {
+                                Cache.contentPosition = 3
+                            }
+                            19 -> {
+                                Cache.contentPosition = 4
+                            }
+                            20 -> {
+                                Cache.contentPosition = 5
+                            }
+                            21 -> {
+                                Cache.contentPosition = 6
+                            }
+                        }
+                        findNavController().navigate(R.id.subjectsFragment)
+                    }
+
+
                 }
             })
         binding.rvSubject.adapter = subjectAdapter
@@ -317,10 +327,20 @@ class HomeFragment : Fragment() {
 
     private fun loadSubjects() {
         list = ArrayList()
-        list.add(Subject(resources.getString(R.string.getting_started), R.drawable.ic_getting_started))
+        list.add(
+            Subject(
+                resources.getString(R.string.getting_started),
+                R.drawable.ic_getting_started
+            )
+        )
         list.add(Subject(resources.getString(R.string.command_line), R.drawable.command_line))
         list.add(Subject(resources.getString(R.string.text_fu), R.drawable.text_fu))
-        list.add(Subject(resources.getString(R.string.text_fu_advanced), R.drawable.text_fu_advanced))
+        list.add(
+            Subject(
+                resources.getString(R.string.text_fu_advanced),
+                R.drawable.text_fu_advanced
+            )
+        )
         list.add(Subject(resources.getString(R.string.user_management), R.drawable.user_management))
         list.add(Subject(resources.getString(R.string.permissions), R.drawable.access))
         list.add(Subject(resources.getString(R.string.processes), R.drawable.processes))
@@ -330,14 +350,34 @@ class HomeFragment : Fragment() {
         list.add(Subject(resources.getString(R.string.boot_the_system), R.drawable.booting))
         list.add(Subject(resources.getString(R.string.kernel), R.drawable.kernel))
         list.add(Subject(resources.getString(R.string.init), R.drawable.init))
-        list.add(Subject(resources.getString(R.string.process_utilization), R.drawable.process_utilization))
+        list.add(
+            Subject(
+                resources.getString(R.string.process_utilization),
+                R.drawable.process_utilization
+            )
+        )
         list.add(Subject(resources.getString(R.string.logging), R.drawable.logging))
         list.add(Subject(resources.getString(R.string.network_sharing), R.drawable.network_sharing))
-        list.add(Subject(resources.getString(R.string.network_basic), R.drawable.network_fundamentals))
+        list.add(
+            Subject(
+                resources.getString(R.string.network_basic),
+                R.drawable.network_fundamentals
+            )
+        )
         list.add(Subject(resources.getString(R.string.subnetting), R.drawable.subnetting))
         list.add(Subject(resources.getString(R.string.routing), R.drawable.routing))
-        list.add(Subject(resources.getString(R.string.network_config), R.drawable.network_configuration))
-        list.add(Subject(resources.getString(R.string.troubleshooting), R.drawable.network_troubleshooting))
+        list.add(
+            Subject(
+                resources.getString(R.string.network_config),
+                R.drawable.network_configuration
+            )
+        )
+        list.add(
+            Subject(
+                resources.getString(R.string.troubleshooting),
+                R.drawable.network_troubleshooting
+            )
+        )
         list.add(Subject(resources.getString(R.string.dns), R.drawable.dns))
 
     }
