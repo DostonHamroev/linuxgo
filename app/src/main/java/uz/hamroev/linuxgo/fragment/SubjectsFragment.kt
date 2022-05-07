@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.MobileAds
 import uz.hamroev.linuxgo.R
@@ -39,11 +40,9 @@ class SubjectsFragment : Fragment() {
         themeAdapter =
             ThemeAdapter(binding.root.context, list, object : ThemeAdapter.OnThemeClickListener {
                 override fun onCLickTheme(theme: Theme, position: Int) {
-                    Toast.makeText(
-                        requireContext(),
-                        "${list[position].themeName}",
-                        Toast.LENGTH_SHORT
-                    ).show()
+                    Cache.title_data = list[position].themeName
+                    Cache.dataPosition = position
+                    findNavController().navigate(R.id.dataFragment)
                 }
             })
         binding.rvTheme.adapter = themeAdapter
@@ -69,7 +68,8 @@ class SubjectsFragment : Fragment() {
             0 -> {
                 when (Cache.contentPosition) {
                     0 -> {
-                        binding.title.text = activity?.resources!!.getString(R.string.getting_started)
+                        binding.title.text =
+                            activity?.resources!!.getString(R.string.getting_started)
                         list.add(Theme(1, activity?.resources!!.getString(R.string.getting_1)))
                         list.add(Theme(2, activity?.resources!!.getString(R.string.getting_2)))
                         list.add(Theme(3, activity?.resources!!.getString(R.string.getting_3)))
@@ -174,7 +174,8 @@ class SubjectsFragment : Fragment() {
                         list.add(Theme(16, activity?.resources!!.getString(R.string.text_fu_16)))
                     }
                     3 -> {
-                        binding.title.text = activity?.resources!!.getString(R.string.text_fu_advanced)
+                        binding.title.text =
+                            activity?.resources!!.getString(R.string.text_fu_advanced)
                         list.add(
                             Theme(
                                 1,
@@ -255,7 +256,8 @@ class SubjectsFragment : Fragment() {
                         )
                     }
                     4 -> {
-                        binding.title.text = activity?.resources!!.getString(R.string.user_management)
+                        binding.title.text =
+                            activity?.resources!!.getString(R.string.user_management)
                         list.add(
                             Theme(
                                 1,
@@ -343,7 +345,8 @@ class SubjectsFragment : Fragment() {
                         list.add(Theme(7, activity?.resources!!.getString(R.string.device_7)))
                     }
                     1 -> {
-                        binding.title.text = activity?.resources!!.getString(R.string.the_filesystem)
+                        binding.title.text =
+                            activity?.resources!!.getString(R.string.the_filesystem)
                         list.add(Theme(1, activity?.resources!!.getString(R.string.filesystem_1)))
                         list.add(Theme(2, activity?.resources!!.getString(R.string.filesystem_2)))
                         list.add(Theme(3, activity?.resources!!.getString(R.string.filesystem_3)))
@@ -358,7 +361,8 @@ class SubjectsFragment : Fragment() {
                         list.add(Theme(12, activity?.resources!!.getString(R.string.filesystem_12)))
                     }
                     2 -> {
-                        binding.title.text = activity?.resources!!.getString(R.string.boot_the_system)
+                        binding.title.text =
+                            activity?.resources!!.getString(R.string.boot_the_system)
                         list.add(Theme(1, activity?.resources!!.getString(R.string.boot_system_1)))
                         list.add(Theme(2, activity?.resources!!.getString(R.string.boot_system_2)))
                         list.add(Theme(3, activity?.resources!!.getString(R.string.boot_system_3)))
@@ -385,15 +389,56 @@ class SubjectsFragment : Fragment() {
                         list.add(Theme(7, activity?.resources!!.getString(R.string.init_7)))
                     }
                     5 -> {
-                        binding.title.text = activity?.resources!!.getString(R.string.process_utilization)
-                        list.add(Theme(1, activity?.resources!!.getString(R.string.process_utilization_1)))
-                        list.add(Theme(2, activity?.resources!!.getString(R.string.process_utilization_2)))
-                        list.add(Theme(3, activity?.resources!!.getString(R.string.process_utilization_3)))
-                        list.add(Theme(4, activity?.resources!!.getString(R.string.process_utilization_4)))
-                        list.add(Theme(5, activity?.resources!!.getString(R.string.process_utilization_5)))
-                        list.add(Theme(6, activity?.resources!!.getString(R.string.process_utilization_6)))
-                        list.add(Theme(7, activity?.resources!!.getString(R.string.process_utilization_7)))
-                        list.add(Theme(8, activity?.resources!!.getString(R.string.process_utilization_8)))
+                        binding.title.text =
+                            activity?.resources!!.getString(R.string.process_utilization)
+                        list.add(
+                            Theme(
+                                1,
+                                activity?.resources!!.getString(R.string.process_utilization_1)
+                            )
+                        )
+                        list.add(
+                            Theme(
+                                2,
+                                activity?.resources!!.getString(R.string.process_utilization_2)
+                            )
+                        )
+                        list.add(
+                            Theme(
+                                3,
+                                activity?.resources!!.getString(R.string.process_utilization_3)
+                            )
+                        )
+                        list.add(
+                            Theme(
+                                4,
+                                activity?.resources!!.getString(R.string.process_utilization_4)
+                            )
+                        )
+                        list.add(
+                            Theme(
+                                5,
+                                activity?.resources!!.getString(R.string.process_utilization_5)
+                            )
+                        )
+                        list.add(
+                            Theme(
+                                6,
+                                activity?.resources!!.getString(R.string.process_utilization_6)
+                            )
+                        )
+                        list.add(
+                            Theme(
+                                7,
+                                activity?.resources!!.getString(R.string.process_utilization_7)
+                            )
+                        )
+                        list.add(
+                            Theme(
+                                8,
+                                activity?.resources!!.getString(R.string.process_utilization_8)
+                            )
+                        )
                     }
                     6 -> {
                         binding.title.text = activity?.resources!!.getString(R.string.logging)
@@ -409,24 +454,95 @@ class SubjectsFragment : Fragment() {
             2 -> {
                 when (Cache.contentPosition) {
                     0 -> {
-                        binding.title.text = activity?.resources!!.getString(R.string.network_sharing)
-                        list.add(Theme(1, activity?.resources!!.getString(R.string.network_sharing_1)))
-                        list.add(Theme(2, activity?.resources!!.getString(R.string.network_sharing_2)))
-                        list.add(Theme(3, activity?.resources!!.getString(R.string.network_sharing_3)))
-                        list.add(Theme(4, activity?.resources!!.getString(R.string.network_sharing_4)))
-                        list.add(Theme(5, activity?.resources!!.getString(R.string.network_sharing_5)))
+                        binding.title.text =
+                            activity?.resources!!.getString(R.string.network_sharing)
+                        list.add(
+                            Theme(
+                                1,
+                                activity?.resources!!.getString(R.string.network_sharing_1)
+                            )
+                        )
+                        list.add(
+                            Theme(
+                                2,
+                                activity?.resources!!.getString(R.string.network_sharing_2)
+                            )
+                        )
+                        list.add(
+                            Theme(
+                                3,
+                                activity?.resources!!.getString(R.string.network_sharing_3)
+                            )
+                        )
+                        list.add(
+                            Theme(
+                                4,
+                                activity?.resources!!.getString(R.string.network_sharing_4)
+                            )
+                        )
+                        list.add(
+                            Theme(
+                                5,
+                                activity?.resources!!.getString(R.string.network_sharing_5)
+                            )
+                        )
                     }
                     1 -> {
                         binding.title.text = activity?.resources!!.getString(R.string.network_basic)
-                        list.add(Theme(1, activity?.resources!!.getString(R.string.network_basic_1)))
-                        list.add(Theme(2, activity?.resources!!.getString(R.string.network_basic_2)))
-                        list.add(Theme(3, activity?.resources!!.getString(R.string.network_basic_3)))
-                        list.add(Theme(4, activity?.resources!!.getString(R.string.network_basic_4)))
-                        list.add(Theme(5, activity?.resources!!.getString(R.string.network_basic_5)))
-                        list.add(Theme(6, activity?.resources!!.getString(R.string.network_basic_6)))
-                        list.add(Theme(7, activity?.resources!!.getString(R.string.network_basic_7)))
-                        list.add(Theme(8, activity?.resources!!.getString(R.string.network_basic_8)))
-                        list.add(Theme(9, activity?.resources!!.getString(R.string.network_basic_9)))
+                        list.add(
+                            Theme(
+                                1,
+                                activity?.resources!!.getString(R.string.network_basic_1)
+                            )
+                        )
+                        list.add(
+                            Theme(
+                                2,
+                                activity?.resources!!.getString(R.string.network_basic_2)
+                            )
+                        )
+                        list.add(
+                            Theme(
+                                3,
+                                activity?.resources!!.getString(R.string.network_basic_3)
+                            )
+                        )
+                        list.add(
+                            Theme(
+                                4,
+                                activity?.resources!!.getString(R.string.network_basic_4)
+                            )
+                        )
+                        list.add(
+                            Theme(
+                                5,
+                                activity?.resources!!.getString(R.string.network_basic_5)
+                            )
+                        )
+                        list.add(
+                            Theme(
+                                6,
+                                activity?.resources!!.getString(R.string.network_basic_6)
+                            )
+                        )
+                        list.add(
+                            Theme(
+                                7,
+                                activity?.resources!!.getString(R.string.network_basic_7)
+                            )
+                        )
+                        list.add(
+                            Theme(
+                                8,
+                                activity?.resources!!.getString(R.string.network_basic_8)
+                            )
+                        )
+                        list.add(
+                            Theme(
+                                9,
+                                activity?.resources!!.getString(R.string.network_basic_9)
+                            )
+                        )
                     }
                     2 -> {
                         binding.title.text = activity?.resources!!.getString(R.string.subnetting)
@@ -449,20 +565,72 @@ class SubjectsFragment : Fragment() {
                         list.add(Theme(7, activity?.resources!!.getString(R.string.routing_7)))
                     }
                     4 -> {
-                        binding.title.text = activity?.resources!!.getString(R.string.network_config)
-                        list.add(Theme(1, activity?.resources!!.getString(R.string.network_config_1)))
-                        list.add(Theme(2, activity?.resources!!.getString(R.string.network_config_2)))
-                        list.add(Theme(3, activity?.resources!!.getString(R.string.network_config_3)))
-                        list.add(Theme(4, activity?.resources!!.getString(R.string.network_config_4)))
-                        list.add(Theme(5, activity?.resources!!.getString(R.string.network_config_5)))
+                        binding.title.text =
+                            activity?.resources!!.getString(R.string.network_config)
+                        list.add(
+                            Theme(
+                                1,
+                                activity?.resources!!.getString(R.string.network_config_1)
+                            )
+                        )
+                        list.add(
+                            Theme(
+                                2,
+                                activity?.resources!!.getString(R.string.network_config_2)
+                            )
+                        )
+                        list.add(
+                            Theme(
+                                3,
+                                activity?.resources!!.getString(R.string.network_config_3)
+                            )
+                        )
+                        list.add(
+                            Theme(
+                                4,
+                                activity?.resources!!.getString(R.string.network_config_4)
+                            )
+                        )
+                        list.add(
+                            Theme(
+                                5,
+                                activity?.resources!!.getString(R.string.network_config_5)
+                            )
+                        )
                     }
                     5 -> {
-                        binding.title.text = activity?.resources!!.getString(R.string.troubleshooting)
-                        list.add(Theme(1, activity?.resources!!.getString(R.string.troubleshooting_1)))
-                        list.add(Theme(2, activity?.resources!!.getString(R.string.troubleshooting_2)))
-                        list.add(Theme(3, activity?.resources!!.getString(R.string.troubleshooting_3)))
-                        list.add(Theme(4, activity?.resources!!.getString(R.string.troubleshooting_4)))
-                        list.add(Theme(5, activity?.resources!!.getString(R.string.troubleshooting_5)))
+                        binding.title.text =
+                            activity?.resources!!.getString(R.string.troubleshooting)
+                        list.add(
+                            Theme(
+                                1,
+                                activity?.resources!!.getString(R.string.troubleshooting_1)
+                            )
+                        )
+                        list.add(
+                            Theme(
+                                2,
+                                activity?.resources!!.getString(R.string.troubleshooting_2)
+                            )
+                        )
+                        list.add(
+                            Theme(
+                                3,
+                                activity?.resources!!.getString(R.string.troubleshooting_3)
+                            )
+                        )
+                        list.add(
+                            Theme(
+                                4,
+                                activity?.resources!!.getString(R.string.troubleshooting_4)
+                            )
+                        )
+                        list.add(
+                            Theme(
+                                5,
+                                activity?.resources!!.getString(R.string.troubleshooting_5)
+                            )
+                        )
                     }
                     6 -> {
                         binding.title.text = activity?.resources!!.getString(R.string.dns)

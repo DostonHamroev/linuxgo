@@ -18,5 +18,14 @@
         android:id="@+id/subjectsFragment"
         android:name="uz.hamroev.linuxgo.fragment.SubjectsFragment"
         android:label="fragment_subjects"
-        tools:layout="@layout/fragment_subjects" />
+        tools:layout="@layout/fragment_subjects" >
+        <action
+            android:id="@+id/action_subjectsFragment_to_dataFragment"
+            app:destination="@id/dataFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dataFragment"
+        android:name="uz.hamroev.linuxgo.fragment.DataFragment"
+        android:label="fragment_data"
+        tools:layout="@layout/fragment_data" />
 </navigation>

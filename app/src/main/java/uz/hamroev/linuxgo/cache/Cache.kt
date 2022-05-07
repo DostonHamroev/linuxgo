@@ -42,6 +42,21 @@ object Cache {
                 it.putInt("contentposition", value)
             }
         }
+    var dataPosition: Int?
+        get() = sharedPreferences.getInt("dataposition", 0)
+        set(value) = sharedPreferences.edit() {
+            if (value != null) {
+                it.putInt("dataposition", value)
+            }
+        }
+
+    var title_data: String?
+        get() = sharedPreferences.getString("datatitle", "")
+        set(value) = sharedPreferences.edit() {
+            if (value != null) {
+                it.putString("datatitle", value)
+            }
+        }
 
 
 }
